@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+// demostration of displaying pyramids with double loop
+class FOP{
+public:
+void starpyramid() {
+    int n = 4; //adjust the number of the counter for how big you want the pyramid to be
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            cout << " ";
+        }
+        for (int k = 1; k <= (2 * i - 1); k++) {
+            cout << "*";
+        }
+        // moes to the next lne
+        cout << endl;
+    }
+}
+
+void numberpyramid() {
+    int num = 1;
+    int rows = 4;  
+
+    for (int i = 1; i <= rows; i++) {
+        for (int space = 1; space <= rows - i; space++) {
+            cout << " ";
+        }
+        for (int j = 1; j <= i; j++) {
+            if (num > 14) {
+                break;
+            }
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
+
+} };
+int main() {
+    FOP p;
+    p.starpyramid();
+    cout<<"\n";
+    p.numberpyramid();
+    
+
+    return 0;
+}
